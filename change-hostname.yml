@@ -1,0 +1,5 @@
+- name: Start hostname change
+  hosts: all
+  become: true 
+  roles:
+     - hostname

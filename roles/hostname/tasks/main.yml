@@ -1,0 +1,26 @@
+- name: Set a hostname 
+  ansible.builtin.hostname:
+    name: "{{ hostname.name }}"
+
+- name: change_hosts // deploy hosts
+  become: yes
+  template:
+    src: roles/hostname/templates/hosts
+    dest: /etc/hosts
+    owner: root
+    group: root
+    mode: 0644
+    backup: yes
+
+- name: change_cloud // deploy cloud.cfg
+  become: yes
+  template:
+    src: roles/hostname/templates/cloud.cfg
+    dest: /etc/cloud/cloud.cfg
+    owner: root
+    group: root
+    mode: 0644
+    backup: yes
+
+
+
