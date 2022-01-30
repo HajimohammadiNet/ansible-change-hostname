@@ -5,7 +5,7 @@ Change Hostname Using Ansible
 Change Hostname Using Ansible
 
 # Supported OS
-This Version is fot Ubuntu 18.04 or later
+This Version is for Ubuntu 18.04 or later
 
-#Playbook Command Syntax
+# Playbook Command Syntax
 ansible-playbook change-hostname.yml -l <host_IP> -u <User_Name> -kK --extra-vars "name="
